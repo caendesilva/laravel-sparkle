@@ -7,12 +7,16 @@
     <title>{{ $title ?? config('app.name') }}</title>
 </head>
 <body class="d-flex flex-column vh-100">
-    <x-nav />
+    @if($nav ?? true)
+        <x-nav />
+    @endif
 
     <main class="container py-4 mb-auto">
         {{ $slot }}
     </main>
 
-    <x-footer />
+    @if($footer ?? true)
+        <x-footer />
+    @endif
 </body>
 </html>

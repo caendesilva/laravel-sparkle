@@ -7,6 +7,8 @@
     <title>{{ $title ?? config('app.name') }}</title>
 </head>
 <body>
+    <x-nav />
+
     <main class="container py-4">
         {{ $slot }}
     </main>

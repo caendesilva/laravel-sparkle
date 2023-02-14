@@ -7,6 +7,7 @@
             </p>
             <small>
                 Laravel Sparkle v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                - Request served in {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }}ms
             </small>
         </div>
         <div class="col-lg-3"></div>

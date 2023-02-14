@@ -25,6 +25,10 @@ Since there are no accounts, most responses will be the same allowing you to hea
 
 If you do require authentication for APIs, Sanctum is still available, and Sparkle even has a console command to generate API users and tokens.
 
+### Security
+
+Note that in Sparkle, the web routes uses the same middleware as the (standard) API routes. This means that sessions and CSRF protection are disabled. If you need these, you can easily add them back in, though you should at that point consider if Sparkle is the right choice for your application.
+
 ### Frontend
 
 To get started with your frontend quickly, a simple app layout is also included. It runs Bootstrap 5 which is perfect for rapid prototyping. It's loaded using the official CDN visitors may already have it cached. If you still want to reduce the bundle size, an easy way is to download the compiled files, and run them through an online CSS purifier to remove classes you don't need.

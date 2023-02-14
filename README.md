@@ -28,3 +28,31 @@ If you do require authentication for APIs, Sanctum is still available, and Spark
 ### Frontend
 
 To get started with your frontend quickly, a simple app layout is also included. It runs Bootstrap 5 which is perfect for rapid prototyping. It's loaded using the official CDN visitors may already have it cached. If you still want to reduce the bundle size, an easy way is to download the compiled files, and run them through an online CSS purifier to remove classes you don't need.
+
+## Installation
+
+### Local Development
+
+```bash
+git clone https://github.com/caendesilva/laravel-sparkle.git
+cd laravel-sparkle
+
+cp .env.example .env
+php artisan key:generate
+
+composer install
+```
+
+### Production
+
+```bash
+git clone https://github.com/caendesilva/laravel-sparkle.git
+cd laravel-sparkle
+
+cp .env.example .env
+php artisan key:generate
+
+composer install --no-dev
+
+echo 'Remember to set APP_ENV=production in your .env file!'
+```

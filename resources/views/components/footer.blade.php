@@ -6,7 +6,11 @@
                 &copy; Copyright {{ config('app.name') }}
             </p>
             <small>
-                Laravel Sparkle v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                @env('local')
+                    Laravel Sparkle v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                @else
+                    Laravel Sparkle v{{ Illuminate\Foundation\Application::VERSION }}
+                @endenv
                 - Request served in {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }}ms
             </small>
         </div>
